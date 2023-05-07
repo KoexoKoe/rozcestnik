@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+  
+  /*
+  
+  .Home_Page_1 {
+    position: absolute;
+    left: 0px;
+    top: 1180px;
+    width: 1920px;
+    height: 1080px;
+    z-index: 7;
+  }
+  .Obdélník_2 {
+    background-image: url("Obdélník 2.png");
+    position: absolute;
+    left: 785px;
+    top: 480px;
+    width: 351px;
+    height: 455px;
+    z-index: 6;
+  }
+  .ÚČET {
+    font-size: 36px;
+    font-family: "Comic Sans MS";
+    color: rgb(255, 255, 255);
+    line-height: 1.2;
+    text-align: justifyLeft;
+    position: absolute;
+    left: 905.109px;
+    top: 81.104px;
+    z-index: 5;
+  }
+  .Obdélník_3 {
+    border-radius: 25px;
+    background-color: rgb(37, 192, 176);
+    box-shadow: 0px 3px 7px 0px rgba(1, 42, 0, 0.99);
+    position: absolute;
+    left: 787px;
+    top: 57px;
+    width: 347px;
+    height: 115px;
+    z-index: 4;
+  }
+  .ROZCESTNÍK {
+    font-size: 120px;
+    font-family: "Bernard MT Condensed";
+    color: rgb(37, 192, 176);
+    line-height: 1.2;
+    text-align: justifyLeft;
+    position: absolute;
+    left: 612px;
+    top: 304.5px;
+    z-index: 3;
+  }
+  .Vrstva_1 {
+    background-image: url("Vrstva 1.png");
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 1920px;
+    height: 1080px;
+    z-index: 2;
+  }
+  
+}
+
+*/
+
+#ROZCESTNÍK {
+  font-size: 120px;
+  font-family: "Bernard MT Condensed";
+  color: rgb(37, 192, 176);
+  line-height: 1.2;
+  left: 612px;
+  top: 304.5px;
+  z-index: 3;
+}
+
+ #ÚČET {
+    font-size: 36px;
+    font-family: "Comic Sans MS";
+    color: rgb(255, 255, 255);
+    line-height: 1.2;
+    margin-top: 80px;
+    z-index: 10;
+  }
+#header_text{
+  font-size: 100px;
+  font-family: "Bernard MT Condensed";
+  color: rgb(37, 192, 176);
+  line-height: 1.2;
+  left: 612px;
+  top: 304.5px;
+  z-index: 3;
+}
+
+Body path:hover{
+  fill: rgb(105, 206, 142);
+  cursor: pointer;
+}
+
+Body path{
+  fill: white;
+  stroke: black;
+}
+
+Body svg{
+  margin: 0;
+}
+
+@media screen and (max-width: 600px){
+  Body svg{
+    scale: none;
+    width: 100%;
+    height: 100%;
+  }
+
+  Body{
+    margin:0;
+    padding: 0;
+  }
+}
+  
