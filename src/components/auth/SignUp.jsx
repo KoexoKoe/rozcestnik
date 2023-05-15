@@ -21,38 +21,51 @@ const SignUp = () => {
       })
       .catch((error) => {
         console.log(error);
+        alert("Nezadal jsi všechny potřebné údaje");
       });
   };
 
   return (
-    <div className="w-[100%] h-[1080px] bg-black">
-      <div className="flex flex-col justify-center text-center mt-20 bg-blue-400">
-        <form onSubmit={signUp}>
-          <h1>Registruj se</h1>
+    <div>
+      <div className="w-screen screen-full justify-center text-center bg-blue-400">
+        <form
+          className="w-screen h-screen flex flex-col justify-center items-center text-center border-[4px] border-blue-500"
+          onSubmit={signUp}
+        >
+          <h1>REGISTRACE</h1>
           <input
             type="email"
-            placeholder="Vlož svůj email"
+            placeholder="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            className="m-2 border-black border-[2px] text-center "
           ></input>
           <input
             type="password"
-            placeholder="Vlož své heslo"
+            placeholder="heslo"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            className="m-2 border-black border-[2px] text-center "
           ></input>
-          <button type="submit">Vytvořit účet</button>
+          <button
+            className="border-[15px] m-2 text-1xl border-blue-500 bg-blue-500 drop-shadow-sm"
+            type="submit"
+          >
+            Založit účet
+          </button>
           <div>
-            <p className="mt-5">Již máš účet?</p>
+            <p className="mt-5">Již jsi zaregistrovaný?</p>
             <Link to="/login">
-              <button className="">Přihlášení</button>
+              <button className="border-[15px] m-2 text-1xl border-blue-500 bg-blue-500 drop-shadow-sm text-black">
+                Přihlášení
+              </button>
             </Link>
           </div>
           <button
             onClick={navigateToHome}
-            className="m-2 justify-center items-center border-[15px] border-[rgb(37,192,176)] bg-[rgb(37,192,176)]  drop-shadow-2xl hover:scale-105 duration-100"
+            className="mt-[100px] justify-center items-center border-[15px] border-[rgb(37,192,176)] bg-[rgb(37,192,176)]  drop-shadow-2xl hover:scale-105 duration-100"
           >
-            Domů
+            DOMŮ
           </button>
         </form>
       </div>

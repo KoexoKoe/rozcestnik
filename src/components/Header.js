@@ -37,14 +37,14 @@ const Header = () => {
   return (
     <header
       id="home"
-      className="w-[100%] h-[1080px] flex flex-col justify-between items-center text-center bg-gradient-to-t from-[#c2fdf1] to-[#9dffe6]"
+      className="w-[100%] h-screen flex flex-col  items-center text-center bg-gradient-to-t from-[#c2fdf1] to-[#9dffe6]"
     >
       <div className="text-xl text-green-700">
         {authUser ? (
           <>
             <p>{`Přihlášen jako: ${authUser.email}`}</p>
             <button
-              className="border-[15px] border-[rgb(37,192,176)] bg-[rgb(37,192,176)]  drop-shadow-2xl hover:scale-105 duration-100"
+              className="border-[15px] m-2 border-[rgb(37,192,176)] bg-[rgb(37,192,176)]  drop-shadow-2xl hover:scale-105 duration-100 text-black"
               onClick={userSignOut}
             >
               Odhlásit se
@@ -52,7 +52,7 @@ const Header = () => {
             <div>
               <button
                 onClick={navigateToMap}
-                className="border-[15px] border-[rgb(37,192,176)] bg-[rgb(37,192,176)]  drop-shadow-2xl hover:scale-105 duration-100"
+                className="border-[15px] m-2 border-[rgb(37,192,176)] bg-[rgb(37,192,176)]  drop-shadow-2xl hover:scale-105 duration-100 text-black"
               >
                 MAPA
               </button>
@@ -70,10 +70,10 @@ const Header = () => {
           </div>
         )}
       </div>
-      <div>
-        <h1 id="ROZCESTNÍK">ROZCESTNÍK</h1>
-      </div>
-      <div>
+      <div className="flex flex-col items-center justify-center text-center">
+        <h1 className="mt-5" id="ROZCESTNÍK">
+          ROZCESTNÍK
+        </h1>
         <img alt="Main_Logo" src={logo_img} />
       </div>
     </header>

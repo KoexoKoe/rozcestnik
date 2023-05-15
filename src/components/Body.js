@@ -8,8 +8,9 @@ const Body = () => {
   const navigateToHome = () => {
     navigate("/");
   };
+
   return (
-    <div className="w-[100%] h-[100%] flex flex-col justify-between items-center text-center bg-gradient-to-b from-[#c2fdf1] to-[#9dffe6]">
+    <div className="w-screen sm:h-full h-screen flex flex-col justify-between items-center text-center bg-gradient-to-b from-[#c2fdf1] to-[#9dffe6]">
       <div className="flex flex-col  m-5">
         <button
           onClick={navigateToHome}
@@ -21,7 +22,7 @@ const Body = () => {
           <h1>Objev nová místa</h1>
         </div>
       </div>
-      <div className="flex justify-center items-center">
+      <div className="justify-center">
         <svg
           viewBox="0 90 1100 400"
           className="w-[100%] h-screen"
@@ -146,6 +147,12 @@ const Body = () => {
             </a>
           </g>
         </svg>
+        <p id="mobilemap" className="m-0 p-0 ">
+          Mobilní verze
+        </p>
+        <p id="mobilemap" className="m-0 p-0 mb-2">
+          Mapa je dostupná při vyšším rozlišení
+        </p>
       </div>
     </div>
   );

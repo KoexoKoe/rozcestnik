@@ -138,13 +138,16 @@ Body path{
   Body svg{
     visibility: visible;
   }
+  Body #mobilemap{
+    visibility: hidden;
+  }
 }
 
 @media screen and (max-width: 600px){
   Body svg{
-    visibility: hidden;
+    display: none;
   }
-
+/* Otevření menu v mobilní verzi místo mapy*/
   Body #mobilemap{
     visibility: visible;
   }

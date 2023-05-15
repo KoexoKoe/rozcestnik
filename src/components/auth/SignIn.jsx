@@ -27,33 +27,45 @@ const SignIn = () => {
   };
 
   return (
-    <div className="w-full h-full bg-blue-900">
-      <div className="justify-center text-center mt-20 bg-blue-400">
-        <form onSubmit={signIn}>
-          <h1>Přihlášení</h1>
+    <div>
+      <div className="w-screen screen-full justify-center text-center bg-blue-400">
+        <form
+          className="w-screen h-screen flex flex-col justify-center items-center text-center border-[4px] border-blue-500"
+          onSubmit={signIn}
+        >
+          <h1>PŘIHLÁŠENÍ</h1>
           <input
             type="email"
-            placeholder="Vlož svůj email"
+            placeholder="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            className="m-2 border-black border-[2px] text-center "
           ></input>
           <input
             type="password"
-            placeholder="Vlož své heslo"
+            placeholder="heslo"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            className="m-2 border-black border-[2px] text-center "
           ></input>
-          <button type="submit">Přihlásit se</button>
+          <button
+            className="border-[15px] m-2 text-1xl border-blue-500 bg-blue-500 drop-shadow-sm"
+            type="submit"
+          >
+            Přihlásit se
+          </button>
           <div>
             <Link to="/register">
-              <button className="mt-5">Vytvořit účet</button>
+              <button className="border-[15px] mt-[100px] text-1xl border-blue-500 bg-blue-500 drop-shadow-sm text-black">
+                Vytvořit účet
+              </button>
             </Link>
           </div>
           <button
             onClick={navigateToHome}
-            className="m-2 justify-center items-center border-[15px] border-[rgb(37,192,176)] bg-[rgb(37,192,176)]  drop-shadow-2xl hover:scale-105 duration-100"
+            className="mt-[100px] justify-center items-center border-[15px] border-[rgb(37,192,176)] bg-[rgb(37,192,176)]  drop-shadow-2xl hover:scale-105 duration-100"
           >
-            Domů
+            DOMŮ
           </button>
         </form>
       </div>
