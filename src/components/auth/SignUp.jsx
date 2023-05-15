@@ -8,6 +8,9 @@ const SignUp = () => {
   const [password, setPassword] = useState("");
 
   const navigate = useNavigate();
+  const navigateToHome = () => {
+    navigate("/");
+  };
   const signUp = (e) => {
     e.preventDefault();
     createUserWithEmailAndPassword(auth, email, password)
@@ -41,10 +44,16 @@ const SignUp = () => {
           <button type="submit">Vytvořit účet</button>
           <div>
             <p className="mt-5">Již máš účet?</p>
-            <Link to="/">
+            <Link to="/login">
               <button className="">Přihlášení</button>
             </Link>
           </div>
+          <button
+            onClick={navigateToHome}
+            className="m-2 justify-center items-center border-[15px] border-[rgb(37,192,176)] bg-[rgb(37,192,176)]  drop-shadow-2xl hover:scale-105 duration-100"
+          >
+            Domů
+          </button>
         </form>
       </div>
     </div>
